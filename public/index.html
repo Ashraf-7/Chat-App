@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatApp</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="imgs/favicon.svg.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="container main-container">
+        <header class="header">
+          <div class="info">
+            <img src="imgs/ashraf.png" alt="author photo" />
+            <div class="info-status">
+              <h2>Ashraf</h2>
+              <span class="status">online</span>
+            </div>
+          </div>
+          <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </header>
+        <div class="main">
+          <div class="container">
+            <div class="chat-log">
+              <div class="chat-log__item">
+                <h3 class="chat-log__author">Ashraf</h3>
+                <div class="chat-log__message">
+                  Hey man, How are you? 😀
+                  <small
+                    ><i class="far fa-clock"></i> 14:29
+                    <i class="fas fa-check"></i
+                  ></small>
+                </div>
+              </div>
+              <div class="chat-log__item chat-log__item--own">
+                <h3 class="chat-log__author">Omar</h3>
+                <div class="chat-log__message">
+                  Hi Ashraf, I'm fine Thanks 💜
+                  <small
+                    ><i class="far fa-clock"></i> 14:30
+                    <i class="fas fa-check"></i
+                  ></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-form">
+          <form class="form-horizontal" id="form">
+            <i class="far fa-grin"></i>
+            <i class="fas fa-paperclip"></i>
+            <div class="input">
+              <input
+                type="text"
+                id="input"
+                placeholder="write your message..."
+              />
+              <button type="submit" id="btn">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send</span>
+              </button>
+            </div>
+            <i class="fas fa-microphone"></i>
+          </form>
+        </div>
+      </div>
+      <!-- End Chat Side -->
+      <!-- !Start Left Side -->
+      <div class="holder">
+        <div class="left-col">
+          <h5>
+            conversations
+            <div class="left-col__icons">
+              <i class="fas fa-comment-alt"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </h5>
+          <ul>
+            <li>how to create sub domain <span>05:18</span></li>
+            <li>playing with the DNS <span>03:18</span></li>
+            <li>everything about the virtual hosts <span>05:25</span></li>
+            <li>how to monitor your website <span>04:16</span></li>
+            <li>uncharted beating the last boss <span>07:48</span></li>
+            <li>ys oath In felghana overview <span>05:18</span></li>
+            <li>ys series all games ending <span>03:12</span></li>
+            <li>how to create sub domain <span>08:10</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
