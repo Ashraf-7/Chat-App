@@ -1,3 +1,4 @@
+/* Start Global Variable */
 :root {
   --author-color: #ffffff;
   --own-color: #dcf8c6;
@@ -6,6 +7,8 @@
   --header-footer-color: #f0f0f0;
   --main-transition: 0.3s;
 }
+/* End Global Variable */
+/* Start Global Rules */
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +35,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/* End Global Rules */
+/* Start App Background */
 .app {
   /* background-image: linear-gradient(#009688 20%, #d6dbd7 20%); */
   background-color: #d6dbd7;
@@ -50,6 +55,8 @@ a {
   background-color: #009688;
   z-index: -1;
 }
+/* End App Background */
+/*! Start Current Conversation Main Container */
 .app .container {
   background: #e5ddd5 url("../imgs/background.jpg") fixed;
   padding: 0;
@@ -59,6 +66,8 @@ a {
   width: 60%;
   margin-right: auto;
 }
+/*! End Current Conversation Main Container */
+/* Start Header */
 .header {
   background: var(--header-footer-color);
   margin: 0;
@@ -106,6 +115,8 @@ a {
 .header .fa-arrow-left:hover {
   transform: translateX(-7px);
 }
+/*! End Header */
+/* Start Current Conversation */
 .main {
   height: 100vh;
 }
@@ -126,41 +137,42 @@ a {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   clear: both;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.chat-log__item:first-child::before,
-.chat-log__item:last-child::before {
+.chat-log__item.author::before,
+.chat-log__item.owner::before {
   content: "";
   position: absolute;
   border-width: 10px;
   border-style: solid;
 }
-.chat-log__item:first-child::before {
+.chat-log__item.author::before {
   left: -17px;
   top: 0;
   border-color: var(--author-color) var(--author-color) transparent transparent;
 }
-.chat-log__item:last-child::before {
+.chat-log__item.owner::before {
   right: -17px;
   top: 0;
   border-color: var(--own-color) transparent transparent var(--own-color);
 }
-.chat-log__item.chat-log__item--own {
+.chat-log__item.owner {
   float: right;
   background: var(--own-color);
   text-align: right;
 }
-.chat-log__author {
-  margin: 0 auto 0.5em;
-  font-size: 14px;
-  font-weight: bold;
-}
-.chat-log__message small {
+.chat-log__item small {
   color: #a7bd97;
   cursor: pointer;
 }
 small .fa-clock {
-  margin-left: 22px;
+  margin: 25px 5px 0 25px;
 }
+/*! End Current Conversation */
+/* Start Form */
+/*! End Form */
 .chat-form {
   background-color: var(--header-footer-color);
   padding: 15px 0;
@@ -330,7 +342,9 @@ small .fa-clock {
 .holder .left-col ul li span {
   font-size: 12px;
 }
-
+.holder .left-col ul i {
+  color: #1597e5;
+}
 @media (max-width: 767px) {
   .holder {
     display: none;

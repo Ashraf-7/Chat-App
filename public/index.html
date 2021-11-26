@@ -21,6 +21,7 @@
   <body>
     <div class="app">
       <div class="container">
+        <!-- Start Header -->
         <header class="header">
           <div class="info">
             <i class="fas fa-arrow-left"></i>
@@ -35,32 +36,30 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </header>
+        <!-- End Header -->
+        <!-- Start Current Conversation -->
         <div class="main">
           <div class="main-container">
-            <div class="chat-log">
-              <div class="chat-log__item">
-                <h3 class="chat-log__author">Ashraf</h3>
-                <div class="chat-log__message">
-                  Hey man, How are you? 😀
-                  <small
-                    ><i class="far fa-clock"></i> 14:29
-                    <i class="fas fa-check"></i
-                  ></small>
-                </div>
+            <div id="message-parent" class="chat-log">
+              <div class="chat-log__item author">
+                <p>Hey man, How are you? 😀</p>
+                <small
+                  ><i class="far fa-clock"></i> 14:29
+                  <i class="fas fa-check"></i
+                ></small>
               </div>
-              <div class="chat-log__item chat-log__item--own">
-                <h3 class="chat-log__author">Omar</h3>
-                <div class="chat-log__message">
-                  Hi Ashraf, I'm fine Thanks 💜
-                  <small
-                    ><i class="far fa-clock"></i> 14:30
-                    <i class="fas fa-check"></i
-                  ></small>
-                </div>
-              </div>
+              <!-- <div class="chat-log__item owner">
+                <p>Hi Ashraf, I'm fine Thanks 💜</p>
+                <small>
+                  <i class="far fa-clock"> 14:30</i>
+                  <i class="fas fa-check"></i>
+                </small>
+              </div> -->
             </div>
           </div>
         </div>
+        <!-- End Current Conversation -->
+        <!-- Start Form -->
         <div class="chat-form">
           <form class="form-horizontal" id="form">
             <i class="far fa-grin"></i>
@@ -79,9 +78,10 @@
             <i class="fas fa-microphone"></i>
           </form>
         </div>
+        <!-- End Form -->
       </div>
-      <!-- End Chat Side -->
-      <!-- !Start Left Side -->
+      <!-- End Current Chat Side -->
+      <!-- !Start Conversations Left Side -->
       <div class="holder">
         <div class="left-col">
           <h5>
@@ -185,7 +185,8 @@
           </ul>
         </div>
       </div>
+      <!-- !Start Conversations Left Side -->
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
