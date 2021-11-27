@@ -13,6 +13,7 @@ form.addEventListener("submit", (e) => {
 });
 
 function displayMessage(message) {
+  // Create Elements
   const div = document.createElement("div");
   const messageP = document.createElement("p");
   const small = document.createElement("small");
@@ -20,10 +21,13 @@ function displayMessage(message) {
   const checkIcon = document.createElement("i");
   const date = new Date().toLocaleTimeString();
 
+  // Add Styled Classes
   div.classList.add("chat-log__item", "owner");
   messageP.textContent = message;
   clockIcon.classList.add("far", "fa-clock");
   checkIcon.classList.add("fas", "fa-check");
+
+  // Append The Elements to The DOM
   clockIcon.innerHTML = ` ${date}`;
   small.appendChild(clockIcon);
   small.appendChild(checkIcon);
@@ -33,7 +37,7 @@ function displayMessage(message) {
 }
 
 /*
-// Room
+// Rooms
 const roomInput = document.getElementById("room-input");
 
 joinRoomButton.addEventListener("click", () => {

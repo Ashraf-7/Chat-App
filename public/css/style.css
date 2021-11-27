@@ -277,8 +277,8 @@ small .fa-clock {
     opacity: 0;
   }
 }
-/* End Chat Side
-!Start Left Side */
+/* End Chat Side */
+/*! Start Left Side */
 .holder {
   order: 1;
   border: 1px solid #ccc;
@@ -290,6 +290,7 @@ small .fa-clock {
   background-color: #fff;
   position: relative;
 }
+/* Start Header */
 .holder .left-col h5 {
   padding: 20px;
   display: flex;
@@ -301,13 +302,14 @@ small .fa-clock {
   position: fixed;
   top: 0;
   min-width: 300px;
-  width: 316px;
   z-index: 1;
 }
 .left-col__icons i {
   margin: 0 10px;
   color: var(--icon-color);
 }
+/* End Header */
+/* Start Conversations */
 .holder .left-col ul {
   margin-top: 50px;
 }
@@ -345,6 +347,8 @@ small .fa-clock {
 .holder .left-col ul i {
   color: #1597e5;
 }
+/* End Conversations */
+
 @media (max-width: 767px) {
   .holder {
     display: none;
@@ -358,3 +362,4 @@ small .fa-clock {
     min-width: 100%;
   }
 }
+/*! End Left Side */

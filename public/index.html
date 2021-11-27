@@ -188,5 +188,18 @@
       <!-- !Start Conversations Left Side -->
     </div>
     <script src="js/index.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      let socket = io();
+
+      // Make Client Listen to Server Events
+      socket.on("connect", () => {
+        console.log("Connected to Server.");
+      });
+
+      socket.on("disconnect", () => {
+        console.log("Disconnected from Server!");
+      });
+    </script>
   </body>
 </html>
