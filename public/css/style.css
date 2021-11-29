@@ -5,6 +5,8 @@
   --identity-color: #075e54;
   --icon-color: #51585c;
   --header-footer-color: #f0f0f0;
+  --btn-color: #25d366;
+  --btn-hover-color: #25d366cc;
   --main-transition: 0.3s;
 }
 /* End Global Variable */
@@ -19,6 +21,7 @@
 body {
   font-family: "Roboto", sans-serif;
   caret-color: var(--identity-color);
+  overflow-y: hidden;
 }
 ::selection {
   background-color: var(--identity-color);
@@ -35,12 +38,23 @@ a {
   text-decoration: none;
   color: inherit;
 }
-/* End Global Rules */
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  text-transform: capitalize;
+  color: #222;
+  opacity: 0.7;
+  transition: opacity var(--main-transition);
+}
+input:focus::placeholder {
+  opacity: 0.1;
+}
+/*! End Global Rules */
 /* Start App Background */
 .app {
   /* background-image: linear-gradient(#009688 20%, #d6dbd7 20%); */
   background-color: #d6dbd7;
-  overflow: hidden;
   display: flex;
   position: relative;
   z-index: 1;
@@ -62,9 +76,10 @@ a {
   padding: 0;
   display: flex;
   flex-direction: column;
-  order: 3;
   width: 60%;
   margin-right: auto;
+  overflow-y: auto;
+  height: calc(100vh + 14px);
 }
 /*! End Current Conversation Main Container */
 /* Start Header */
@@ -89,6 +104,11 @@ a {
 .header .icons {
   gap: 30px;
   color: var(--icon-color);
+}
+.header .icons button {
+  border: 0;
+  font-size: 16px;
+  background-color: transparent;
 }
 .header .info img {
   width: 40px;
@@ -118,14 +138,13 @@ a {
 /*! End Header */
 /* Start Current Conversation */
 .main {
-  height: 100vh;
+  min-height: 100vh;
 }
 .app .main .main-container {
-  padding: 70px 50px 100px;
+  padding: 120px 50px;
 }
 .chat-log {
   padding: 40px 0 114px;
-  height: auto;
 }
 .chat-log__item {
   background: var(--author-color);
@@ -166,6 +185,7 @@ a {
 .chat-log__item small {
   color: #a7bd97;
   cursor: pointer;
+  min-width: 100px;
 }
 small .fa-clock {
   margin: 25px 5px 0 25px;
@@ -199,24 +219,12 @@ small .fa-clock {
   border: 1px solid #fff;
   border-radius: 21px;
 }
-.form-horizontal input:focus {
-  outline: none;
-}
-.form-horizontal input::placeholder {
-  text-transform: capitalize;
-  color: #222;
-  opacity: 0.7;
-  transition: opacity var(--main-transition);
-}
-.form-horizontal input:focus::placeholder {
-  opacity: 0.1;
-}
 .form-horizontal button {
   height: 37px;
   padding: 10px 20px;
   border: 0;
   border-radius: 21px;
-  background-color: #25d366;
+  background-color: var(--btn-color);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -235,7 +243,7 @@ small .fa-clock {
   transition: var(--main-transition);
 }
 .form-horizontal button:hover {
-  background-color: #25d366cc;
+  background-color: var(--btn-hover-color);
 }
 .form-horizontal button:hover i {
   transform: translate(3px, -3px);
@@ -280,10 +288,10 @@ small .fa-clock {
 /* End Chat Side */
 /*! Start Left Side */
 .holder {
-  order: 1;
   border: 1px solid #ccc;
   margin-left: auto;
   display: flex;
+  transition: all var(--main-transition);
 }
 .holder .left-col {
   min-width: 300px;
@@ -351,6 +359,7 @@ small .fa-clock {
 
 @media (max-width: 767px) {
   .holder {
+    /* transform: translateX(-100%); */
     display: none;
   }
   .header .fa-arrow-left {
@@ -363,3 +372,73 @@ small .fa-clock {
   }
 }
 /*! End Left Side */
+
+/*! Start Login-Form Page */
+.login-parent,
+.register-parent {
+  width: 30%;
+  margin: 50px auto;
+  /* padding: 60px 30px; */
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--identity-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.login-parent form,
+.register-parent form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.login-parent h2,
+.register-parent h2 {
+  font-size: 42px;
+  margin: 30px 0;
+}
+.login-parent input,
+.register-parent input {
+  width: 85%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.login-parent button,
+.register-parent button {
+  margin-top: 15px;
+  width: 50%;
+  padding: 15px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--btn-color);
+  transition: var(--main-transition);
+}
+.login-parent button:hover,
+.register-parent button:hover {
+  background-color: var(--btn-hover-color);
+}
+.login-parent a,
+.register-parent a {
+  color: #1597e5;
+  margin: 10px 0;
+  font-size: 18px;
+  transition: var(--main-transition);
+}
+.login-parent a:hover,
+.register-parent a:hover {
+  color: #1597e5cc;
+  text-decoration: underline;
+}
+/*! End Login-Form Page */
