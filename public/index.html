@@ -20,67 +20,6 @@
   </head>
   <body>
     <div class="app">
-      <div class="container">
-        <!-- Start Header -->
-        <header class="header">
-          <div class="info">
-            <i class="fas fa-arrow-left"></i>
-            <img src="imgs/ashraf.png" alt="author photo" />
-            <div class="info-status">
-              <h2>Ashraf</h2>
-              <span class="status">online</span>
-            </div>
-          </div>
-          <div class="icons">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-ellipsis-v"></i>
-          </div>
-        </header>
-        <!-- End Header -->
-        <!-- Start Current Conversation -->
-        <div class="main">
-          <div class="main-container">
-            <div id="message-parent" class="chat-log">
-              <div class="chat-log__item author">
-                <p>Hey man, How are you? 😀</p>
-                <small
-                  ><i class="far fa-clock"></i> 14:29
-                  <i class="fas fa-check"></i
-                ></small>
-              </div>
-              <!-- <div class="chat-log__item owner">
-                <p>Hi Ashraf, I'm fine Thanks 💜</p>
-                <small>
-                  <i class="far fa-clock"> 14:30</i>
-                  <i class="fas fa-check"></i>
-                </small>
-              </div> -->
-            </div>
-          </div>
-        </div>
-        <!-- End Current Conversation -->
-        <!-- Start Form -->
-        <div class="chat-form">
-          <form class="form-horizontal" id="form">
-            <i class="far fa-grin"></i>
-            <i class="fas fa-paperclip"></i>
-            <div class="input">
-              <input
-                type="text"
-                id="input"
-                placeholder="write your message..."
-              />
-              <button type="submit" id="btn">
-                <i class="fas fa-paper-plane"></i>
-                <span>Send</span>
-              </button>
-            </div>
-            <i class="fas fa-microphone"></i>
-          </form>
-        </div>
-        <!-- End Form -->
-      </div>
-      <!-- End Current Chat Side -->
       <!-- !Start Conversations Left Side -->
       <div class="holder">
         <div class="left-col">
@@ -186,20 +125,72 @@
         </div>
       </div>
       <!-- !Start Conversations Left Side -->
+      <div class="container">
+        <!-- Start Header -->
+        <header class="header">
+          <div class="info">
+            <i class="fas fa-arrow-left"></i>
+            <img src="imgs/ashraf.png" alt="author photo" />
+            <div class="info-status">
+              <h2>Ashraf</h2>
+              <span class="status">online</span>
+            </div>
+          </div>
+          <div class="icons">
+            <button id="geolocation">
+              <i class="fas fa-map-marker-alt"></i>
+            </button>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start Current Conversation -->
+        <div class="main">
+          <div class="main-container">
+            <div id="message-parent" class="chat-log">
+              <!-- <div class="chat-log__item author">
+                <p>Hey man, How are you? 😀</p>
+                <small
+                  ><i class="far fa-clock"></i> 14:29
+                  <i class="fas fa-check"></i
+                ></small>
+              </div> -->
+              <!-- <div class="chat-log__item owner">
+                <p>Hi Ashraf, I'm fine Thanks 💜</p>
+                <small>
+                  <i class="far fa-clock"> 14:30</i>
+                  <i class="fas fa-check"></i>
+                </small>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- End Current Conversation -->
+        <!-- Start Form -->
+        <div class="chat-form">
+          <form class="form-horizontal" id="form">
+            <i class="far fa-grin"></i>
+            <i class="fas fa-paperclip"></i>
+            <div class="input">
+              <input
+                type="text"
+                id="input"
+                placeholder="write your message..."
+              />
+              <button type="submit" id="btn">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send</span>
+              </button>
+            </div>
+            <i class="fas fa-microphone"></i>
+          </form>
+        </div>
+        <!-- End Form -->
+      </div>
+      <!-- End Current Chat Side -->
     </div>
-    <script src="js/index.js"></script>
     <script src="socket.io/socket.io.js"></script>
-    <script type="text/javascript">
-      let socket = io();
-
-      // Make Client Listen to Server Events
-      socket.on("connect", () => {
-        console.log("Connected to Server.");
-      });
-
-      socket.on("disconnect", () => {
-        console.log("Disconnected from Server!");
-      });
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>
