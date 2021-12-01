@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="imgs/favicon.svg.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        background-image: linear-gradient(to bottom, #009688 20%, #d6dbd7 20%);
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="register-parent">
+      <h2>Register</h2>
+      <form action="/register" method="POST" id="register-form">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          placeholder="Confirm Password"
+          required
+        />
+        <button type="submit" id="login-button">Register</button>
+        <a href="/login">Login</a>
+      </form>
+    </div>
+  </body>
+</html>
